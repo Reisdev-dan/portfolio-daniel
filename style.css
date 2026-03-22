@@ -192,52 +192,71 @@ footer {
 }
 
 /* =========================================
-   6. RESPONSIVIDADE E MENU MOBILE
+   6. RESPONSIVIDADE (Telas de Celular)
    ========================================= */
 
-/* Esconde o botão hambúrguer em telas grandes (PCs) */
-.menu-toggle {
-    display: none; 
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    z-index: 999;
-}
-
-
 @media (max-width: 768px) {
+    
+    header {
+        padding: 15px 20px;
+    }
+
+    
     .menu-toggle {
-        display: block; 
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    
+    .btn-tema {
+        position: absolute;
+        right: 70px;
+        top: 22px; 
+        font-size: 1.3rem;
     }
 
     nav ul {
         display: none; 
         flex-direction: column;
-        background-color: var(--cor-primaria);
-        width: 100%;
         position: absolute;
-        top: 70px; 
+        top: 65px; 
         left: 0;
-        padding: 20px 0;
+        width: 100%;
+        background-color: var(--cor-primaria);
+        padding: 20px 0 25px 0; 
         gap: 20px; 
+        box-shadow: 0 8px 15px rgba(0,0,0,0.3); 
+        z-index: 998; 
     }
 
     nav ul.ativo {
         display: flex;
     }
-}
 
-@media (max-width: 600px) {
+    main {
+        padding: 20px 15px;
+    }
+
     .conteudo-principal {
-        padding: 20px;
+        padding: 25px 20px; 
+    }
+
+    h1 { 
+        font-size: 1.5rem; 
+        margin-bottom: 20px;
+    }
+    h2 { 
+        font-size: 1.3rem; 
+    }
+   
+    .foto {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
     }
 }
-
 /* =========================================
    7. TEMA ESCURO (DARK MODE)
    ========================================= */
@@ -285,11 +304,4 @@ body.dark-mode textarea {
     background-color: #374151;
     color: #ffffff;
 }
-
-/* Ajuste do botão de tema no celular (Mobile) */
-@media (max-width: 768px) {
-    .btn-tema {
-        right: 70px; /* Coloca perfeitamente ao lado do menu hambúrguer */
-        top: 15px;
-    }
 }
