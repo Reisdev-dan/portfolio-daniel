@@ -192,20 +192,11 @@ footer {
 }
 
 /* =========================================
-   6. RESPONSIVIDADE (Telas de Celular)
+   6. MENU HAMBÚRGUER (Regra Geral para PC)
    ========================================= */
 
-@media (max-width: 768px) {
-    
-    .menu-toggle {
-        display: block; 
-        position: absolute;
-        right: 20px;
-        top: 20px;
-    }
-
-    
-    .menu-toggle {
+/* 1. FORA DO @MEDIA: Esconde o botão em telas grandes (PCs) */
+.menu-toggle {
     display: none;  
     background: none;
     border: none;
@@ -216,9 +207,21 @@ footer {
     right: 20px;
     top: 15px;
     z-index: 999;
+}
+
+/* =========================================
+   RESPONSIVIDADE (Telas de Celular)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 2. DENTRO DO @MEDIA: Mostra o botão apenas no celular */
+    .menu-toggle {
+        display: block; 
+        position: absolute;
+        right: 20px;
+        top: 20px;
     }
 
-    
     .btn-tema {
         position: absolute;
         right: 70px;
@@ -265,7 +268,9 @@ footer {
         height: 100px;
         margin-bottom: 20px;
     }
-}
+} /* <--- ESTA CHAVE ESTAVA FALTANDO! ELA ENCERRA AS REGRAS DE CELULAR AQUI */
+
+
 /* =========================================
    7. TEMA ESCURO (DARK MODE)
    ========================================= */
@@ -303,8 +308,8 @@ body.dark-mode {
 body.dark-mode .conteudo-principal,
 body.dark-mode .curso,
 body.dark-mode .projeto {
-    background-color: #1f2937; /* Fundo dos cards escuro */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Sombra mais forte */
+    background-color: #1f2937; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); 
 }
 
 /* Ajuste das caixas de texto do formulário no modo escuro */
@@ -312,5 +317,4 @@ body.dark-mode input,
 body.dark-mode textarea {
     background-color: #374151;
     color: #ffffff;
-}
 }
