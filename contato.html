@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Daniel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+            
+            <ul id="menuPrincipal">
+                <li><a href="index.html">Sobre mim</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+            <button id="btnTema" class="btn-tema" title="Alternar tema claro/escuro">🌙</button>
+        </nav>
+    </header>
+
+    <main>              
+        <section class="conteudo-principal">
+            <h1>Entre em Contato</h1>
+            <p>Preencha o formulário abaixo para me enviar uma mensagem.</p>
+            
+            <form id="formContato">
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            
+            <div id="mensagemAlerta"></div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>

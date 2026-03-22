@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Daniel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+            
+            <ul id="menuPrincipal">
+                <li><a href="index.html">Sobre mim</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+           <button id="btnTema" class="btn-tema" title="Alternar tema claro/escuro">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="conteudo-principal"> <!--Referência "class" para o CSS -->
+            <h1>Meu Portfólio</h1>
+            
+            <div class="projeto">
+                <h2>Modernização de Rede Portuária (Vale)</h2>
+                <p><strong>Data:</strong> Janeiro de 2025 - Janeiro 2026</p>
+                <p><strong>Descrição:</strong> Participação no projeto de modernização e segmentação da topologia de rede ethernet do porto, migrando de uma estrutura de topologia em anel para uma topologia em estrela.
+                </p>
+                <p><strong>Tecnologias:</strong> Equipamentos Cisco Catalyst 9300, Zabbix e Grafana para monitoramento.</p>
+            </div>
+
+            <div class="projeto">
+                <h2>Migração Firewall Firepower (Vale)</h2>
+                <p><strong>Data:</strong> Março de 2024 - Dezembro 2024</p>
+                <p><strong>Descrição:</strong> Participação no projeto de migração do firewall do porto de vitória, foi substituido um firewall Fortinet por um Firepower 4100, tendo que adaptar todas as regras de firewall validando todas Origens x Destinos. 
+                </p>
+                <p><strong>Tecnologias:</strong> Cisco, ISE, ACS, TACACS. </p>
+            </div>
+            
+            </section>
+    </main>
+
+    <script src="script.js"></script>
